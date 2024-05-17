@@ -67,7 +67,7 @@ public class AnimalsRepository: IAnimalsRepository
         
         using var cmd = new SqlCommand();
         cmd.Connection = con;
-        cmd.CommandText = "SELECT * FROM Animal Student WHERE IdAnimal = @IdAnimal";
+        cmd.CommandText = "SELECT * FROM Animal WHERE IdAnimal = @IdAnimal";
         cmd.Parameters.AddWithValue("@IdAnimal", id);
 
         var dr = cmd.ExecuteReader();
